@@ -42,7 +42,8 @@ const Button = styled.button({
     border: 'none',
     width: '100%',
     fontFamily: '$main',
-    fontSize: '4rem'
+    fontSize: '4rem',
+    backgroundColor: '$green'
 });
 
 const colors = ['$green', '$yellow', '$red', '$blue'];
