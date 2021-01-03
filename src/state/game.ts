@@ -1,5 +1,5 @@
-import { atom, DefaultValue, selector, selectorFamily } from 'recoil';
-import { Player, Tip, Game } from '../types';
+import { atom, DefaultValue, selector } from 'recoil';
+import { Game } from '../types';
 import historyEffect from './plugins/historyEffect';
 
 export const gameState = atom<Game>({

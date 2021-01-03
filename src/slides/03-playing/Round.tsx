@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { gameState, playerSelector, playersState, roundStepState } from '../../state';
+import React, { useRef } from 'react';
+import { useRecoilState } from 'recoil';
+import { gameState, roundStepState } from '../../state';
 import { styled } from '../../stitches.config';
 import { NextStepProps, ROUND_STEPS } from '../../types';
-import Tip from './Tip';
 
 function* nextRoundStep(setter: (step: ROUND_STEPS) => void) {
     yield setter(ROUND_STEPS.STEP_2);
@@ -23,7 +22,7 @@ const Button = styled.button({
 });
 
 const Round = ({ nextStep }: NextStepProps) => {
-    const [game, setGame] = useRecoilState(gameState);
+    const [game] = useRecoilState(gameState);
     const [roundStep, setRoundStep] = useRecoilState(roundStepState);
     const generator = useRef(nextRoundStep(setRoundStep));
 

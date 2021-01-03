@@ -15,7 +15,7 @@ function* nextGameStep(setter: (step: GAME_STEPS) => void) {
 
 function App() {
     const [gameStep, setGameStep] = useRecoilState(gameStepState);
-    const [game, setGame] = useRecoilState(gameState);
+    const [, setGame] = useRecoilState(gameState);
     const players = useRecoilValue(playersState);
     const generator = useRef(nextGameStep(setGameStep));
     useBrowserBack();

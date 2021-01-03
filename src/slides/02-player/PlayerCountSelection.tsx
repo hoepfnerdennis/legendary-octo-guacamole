@@ -1,7 +1,7 @@
 import { useSetRecoilState } from 'recoil';
 import { playersState } from '../../state';
 import { styled } from '../../stitches.config';
-import { NextStepProps, Player } from '../../types';
+import { Player } from '../../types';
 
 const Container = styled.div({
     display: 'flex',

@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import Elfen from '../../icons/Elfen';
 import Riesen from '../../icons/Riesen';
 import Zwerge from '../../icons/Zwerge';
 import Menschen from '../../icons/Menschen';
-import { currentRoundState, gameState, playerSelector, playersState } from '../../state';
-import { COLORS, css, styled } from '../../stitches.config';
+import { gameState, playersState } from '../../state';
+import { COLORS, styled } from '../../stitches.config';
 import { Game, NextStepProps } from '../../types';
 import Round from './Round';
 
